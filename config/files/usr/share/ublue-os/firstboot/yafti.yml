@@ -1,0 +1,151 @@
+title: Welcome to idrOs
+properties:
+  mode: "run-on-change"
+screens:
+  first-screen:
+    source: yafti.screen.title
+    values:
+      title: "Welcome to idrOs"
+      icon: "/path/to/icon"
+      description: |
+        This guided installer will help you get started with your new system/
+  can-we-modify-your-flatpaks:
+    source: yafti.screen.consent
+    values:
+      title: Welcome!
+      condition:
+        run: flatpak remotes --columns=name | grep fedora
+      description: |
+        Replacing Fedora flatpak repo with flathub
+      actions:
+        - run: flatpak remote-delete --system --force fedora
+        - run: flatpak remote-delete --user --force fedora
+        - run: flatpak remove --system --noninteractive --all
+        - run: flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
+        - run: flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
+  distrobox-containers:
+    source: yafti.screen.package
+    values:
+      title: Choose Distrobox containers
+      show-terminal: true
+      package_manager: yafti.plugin.run
+      groups:
+        datblygiad:
+          description: Development container
+          default: true
+          packages:
+            - Make directory: mkdir -p ~/Containers/datblygiad
+            - Create container: distrobox create --image ghcr.io/caderidris/datblygiad/datblygiad:latest --name datblygiad --home ~/Containers/datblygiad --yes --pull
+            - Export codium: distrobox enter --name datblygiad -T -- distrobox-export --app codium
+            - Export sqlite browser: distrobox enter --name datblygiad -T -- distrobox-export --app sqlitebrowser
+            - Export jabref: distrobox enter --name datblygiad -T -- distrobox-export --app jabref
+            - Export kitty: distrobox enter --name datblygiad -T -- distrobox-export --app kitty
+            - Export nvim: distrobox enter --name datblygiad -T -- distrobox-export --app nvim --export-path ~/.local/bin
+  applications:
+    source: yafti.screen.package
+    values:
+      title: Application Installer
+      show_terminal: true
+      package_manager: yafti.plugin.flatpak
+      package_manager_defaults:
+        user: false
+        system: true
+      groups:
+        System Apps:
+          description: System applications for all desktop environments.
+          default: true
+          packages:
+            - Flatseal (Permission Manager): com.github.tchx84.Flatseal
+            - Font Downloader: org.gustavoperedo.FontDownloader
+            - Mozilla Firefox: org.mozilla.firefox
+            - KeePassXC: org.keepassxc.KeePassXC
+            - LocalSend: org.localsend.localsend_app
+            - Yubico Authenticator: com.yubico.yubioath
+            - Bottles: com.usebottles.bottles
+            - Boxes: org.gnome.Boxes
+            - qView: com.interversehq.qview
+        Graphics:
+          description: Graphical programs
+          default: false
+          packages:
+            - Blender: org.blender.Blender
+            - GIMP: org.gimp.GIMP
+            - Krita: org.kde.krita
+            - Inkscape: org.inkscape.Inkscape
+            - drawio: com.jgraph.drawio.desktop
+            - RawTherapee: com.rawtherapee.RawTherapee
+            - Boxy SVG: com.boxy_svg.BoxySVG
+        Video:
+          description: Video programs
+          default: false
+          packages:
+            - Kdenlive: org.kde.kdenlive
+            - JellyFin: com.github.iwalton3.jellyfin-media-player
+            - mpv: io.mpv.Mpv
+            - Bino: org.bino3d.bino
+        Audio:
+          description: Audio programs
+          default: false
+          packages:
+            - Strawberry: org.strawberrymusicplayer.strawberry
+            - Reaper: fm.reaper.Reaper
+            - Audacity: org.audacityteam.Audacity
+            - MuseScore: org.musescore.MuseScore
+        Gaming:
+          description: "Rock and Stone!"
+          default: false
+          packages:
+            - Discord: com.discordapp.Discord
+            - Steam: com.valvesoftware.Steam
+            - Gamescope (Utility): org.freedesktop.Platform.VulkanLayer.gamescope
+            - MangoHUD (Utility): org.freedesktop.Platform.VulkanLayer.MangoHud//22.08
+            - SteamTinkerLaunch (Utility): com.valvesoftware.Steam.Utility.steamtinkerlaunch
+            - Proton Updater for Steam: net.davidotek.pupgui2
+        Programming:
+          description: "Tools I regularly use for data science/software development outside of the datblygiad container"
+          default: false
+          packages:
+            - SqliteBrowser: org.sqlitebrowser.sqlitebrowser
+            - Azure Storage Explorer: com.microsoft.AzureStorageExplorer
+            - JupyterLab Desktop: org.jupyter.jupyterlab
+        Office:
+          description: Boost your productivity.
+          default: false
+          packages:
+            - LibreOffice: org.libreoffice.LibreOffice
+            - Thunderbird Email: org.mozilla.Thunderbird
+            - Teams: com.github.IsmaelMartinez.teams_for_linux
+            - Outlook: io.github.mahmoudbahaa.outlook_for_linux
+            - Planify: io.github.alainm23.planify 
+        Other:
+          description: Other programs
+          default: false
+          packages:
+            - WhatsApp: io.github.mimbrero.WhatsAppDesktop
+  pipx-programs:
+    source: yafti.screen.package
+    values:
+      title: Choose Python programs
+      show-terminal: true
+      package_manager: yafti.plugin.run
+      groups:
+        Music Library Organisation:
+          description: Organise your music library
+          default: false
+          packages:
+            - Make directory: pipx install beets
+        Record the Terminal:
+          description: Record terminal session and convert to svg
+          default: false
+          packages:
+            - asciinema: pipx install asciinema
+            - termtosvg: pipx install termtosvg
+
+
+  final-screen:
+    source: yafti.screen.title
+    values:
+      title: "All done!"
+      icon: "/path/to/icon"
+      description: |
+        Welcome to IdrOs!
