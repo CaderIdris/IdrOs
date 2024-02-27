@@ -15,6 +15,3 @@ modules:
   - from-file: flatpaks.yml
   - from-file: bling.yml
   - type: yafti
-  - type: script
-    scripts:
-      - signing.sh
