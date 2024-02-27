@@ -22,7 +22,11 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here 
-          - recipe.yml
+          - recipe-main.yml
+          - recipe-framework.yml
+          - recipe-nvidia.yml
+          - recipe-nv470.yml
+          - recipe-surface.yml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Custom Image
