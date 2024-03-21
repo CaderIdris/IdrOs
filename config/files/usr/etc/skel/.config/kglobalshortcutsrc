@@ -6,13 +6,9 @@ switch-to-activity-521d1d76-9214-41f3-846a-9aceb2470ba2=none,none,Switch to acti
 Switch to Next Keyboard Layout=Meta+Alt+K,Meta+Alt+K,
 _k_friendly_name=Keyboard Layout Switcher
 
-[datblygiad-kitty.desktop]
-_k_friendly_name=kitty (on datblygiad)
-_launch=none,none,kitty (on datblygiad)
-
-[distrobox.desktop]
-_k_friendly_name=distrobox enter --no-workdir --name datblygiad -e kitty
-_launch=Meta+Shift+Return,none,distrobox enter --no-workdir --name datblygiad -e kitty\s
+[datblygiad-wezterm.desktop]
+_k_friendly_name=wezterm (on datblygiad)
+_launch=Meta+Shift+Return,none,distrobox enter --no-workdir --name datblygiad -e wezterm
 
 [kaccess]
 Toggle Screen Reader On and Off=Meta+Alt+S,Meta+Alt+S,Toggle Screen Reader On and Off
