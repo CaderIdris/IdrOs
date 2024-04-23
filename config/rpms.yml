@@ -21,6 +21,7 @@
     - wireguard-tools
     - plymouth-plugin-script
     - pipx
+    - power-profiles-daemon
   remove:
     - opensc
     - firefox # default firefox removed in favor of flatpak
