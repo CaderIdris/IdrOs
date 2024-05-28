@@ -22,6 +22,7 @@
     - plymouth-plugin-script
     - pipx
     - power-profiles-daemon
+    - android-tools
   remove:
     - opensc
     - firefox # default firefox removed in favor of flatpak
