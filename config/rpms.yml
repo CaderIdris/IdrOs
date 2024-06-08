@@ -3,7 +3,6 @@
     - https://download.docker.com/linux/fedora/docker-ce.repo
     - https://rpmsphere.github.io/rpmsphere.repo
   install:
-    - waydroid
     - ykpers
     - yubikey-personalization-gui
     - yubikey-manager

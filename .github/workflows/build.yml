@@ -23,6 +23,7 @@ jobs:
         recipe:
           # !! Add your recipes here 
           - recipe-main.yml
+          - recipe-vauxite-test.yml
           # - recipe-framework.yml
           - recipe-nvidia.yml
           - recipe-nv470.yml
