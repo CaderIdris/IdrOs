@@ -23,11 +23,10 @@ jobs:
         recipe:
           # !! Add your recipes here 
           - recipe-main.yml
-          - recipe-vauxite-test.yml
-          # - recipe-framework.yml
           - recipe-nvidia.yml
           - recipe-nv470.yml
           - recipe-surface.yml
+          # - recipe-framework.yml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Custom Image
