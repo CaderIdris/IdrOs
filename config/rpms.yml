@@ -25,6 +25,8 @@
     - android-tools
     - atftp
     - atftp-client
+    - plasma-workspace-x11
+    - kwin-x11
   remove:
     - opensc
     - firefox # default firefox removed in favor of flatpak
