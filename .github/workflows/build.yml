@@ -24,7 +24,7 @@ jobs:
           # !! Add your recipes here 
           - recipe-main.yml
           - recipe-nvidia.yml
-          - recipe-nv470.yml
+          # - recipe-nv470.yml
           - recipe-surface.yml
           # - recipe-framework.yml
     steps:
