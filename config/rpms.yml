@@ -19,7 +19,6 @@
     - docker-compose-plugin 
     - libappindicator-gtk3
     - wireguard-tools
-    - plymouth-plugin-script
     - pipx
     - power-profiles-daemon
     - android-tools
