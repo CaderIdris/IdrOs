@@ -26,7 +26,7 @@ jobs:
           - recipe-nvidia.yml
           # - recipe-nv470.yml
           - recipe-surface.yml
-          - recipe-framework.yml
+          #- recipe-framework.yml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Custom Image
