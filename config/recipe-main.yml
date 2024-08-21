@@ -13,5 +13,4 @@ modules:
   - from-file: files.yml
   - from-file: rpms.yml
   - from-file: flatpaks.yml
-  - from-file: bling.yml
   - type: yafti

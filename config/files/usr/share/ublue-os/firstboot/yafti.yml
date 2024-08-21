@@ -35,7 +35,7 @@ screens:
           default: true
           packages:
             - Make directory: mkdir -p ~/Containers/datblygiad
-            - Create container: distrobox create --image ghcr.io/caderidris/datblygiad/datblygiad:latest --init --unshare-all --name datblygiad --home ~/Containers/datblygiad --yes --pull --additional-flags "--expose=3000-65535"
+            - Build container: distrobox assemble create --file /usr/share/ublue-os/firstboot/distrobox/containers.ini
             - Export codium: distrobox enter --name datblygiad -T -- distrobox-export --app codium --enter-flags "--no-workdir"
             - Export sqlite browser: distrobox enter --name datblygiad -T -- distrobox-export --app sqlitebrowser --enter-flags "--no-workdir"
             - Export jabref: distrobox enter --name datblygiad -T -- distrobox-export --app jabref --enter-flags "--no-workdir"
