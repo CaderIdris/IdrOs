@@ -35,11 +35,8 @@ screens:
           default: true
           packages:
             - Make directory: mkdir -p ~/Containers/datblygiad
-            - Build container: distrobox assemble create --file /usr/share/ublue-os/firstboot/distrobox/containers.ini
-            - Export codium: distrobox enter --name datblygiad -T -- distrobox-export --app codium --enter-flags "--no-workdir"
-            - Export sqlite browser: distrobox enter --name datblygiad -T -- distrobox-export --app sqlitebrowser --enter-flags "--no-workdir"
+            - Build container: distrobox assemble create --file /usr/share/distrobox-containers/datblygiad.ini
             - Export jabref: distrobox enter --name datblygiad -T -- distrobox-export --app jabref --enter-flags "--no-workdir"
-            - Export kitty: distrobox enter --name datblygiad -T -- distrobox-export --app wezterm --enter-flags "--no-workdir"
   applications:
     source: yafti.screen.package
     values:
