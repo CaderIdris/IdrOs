@@ -2,6 +2,7 @@
   repos:
     - https://download.docker.com/linux/fedora/docker-ce.repo
     - https://rpmsphere.github.io/rpmsphere.repo
+    - https://copr.fedorainfracloud.org/coprs/che/nerd-fonts/repo/fedora-40/che-nerd-fonts-fedora-40.repo 
   install:
     - ykpers
     - yubikey-personalization-gui
@@ -25,6 +26,7 @@
     - atftp
     - atftp-client
     - syncthing
+    - nerd-fonts
   remove:
     - opensc
     - firefox # default firefox removed in favor of flatpak
