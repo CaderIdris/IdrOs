@@ -21,7 +21,6 @@
     - libappindicator-gtk3
     - wireguard-tools
     - pipx
-    - power-profiles-daemon
     - android-tools
     - atftp
     - atftp-client
