@@ -28,6 +28,9 @@
     - syncthing
     - nerd-fonts
     - wezterm
+    - waydroid
+    - sway
+    - "@virtualization"
   remove:
     - opensc
     - firefox # default firefox removed in favor of flatpak
