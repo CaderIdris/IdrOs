@@ -28,8 +28,17 @@
     - syncthing
     - nerd-fonts
     - wezterm
-    - waydroid
     - sway
+    - rofi-wayland
+    - virt-install
+    - libvirt-daemon-config-network
+    - libvirt-daemon-kvm
+    - qemu-kvm
+    - virt-manager
+    - virt-viewer
+    - libguestfs-tools
+    - python3-libguestfs
+    - virt-top
   remove:
     - opensc
     - firefox # default firefox removed in favor of flatpak
