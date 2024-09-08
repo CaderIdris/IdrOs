@@ -3,7 +3,6 @@
     - https://download.docker.com/linux/fedora/docker-ce.repo
     - https://rpmsphere.github.io/rpmsphere.repo
     - https://copr.fedorainfracloud.org/coprs/che/nerd-fonts/repo/fedora-40/che-nerd-fonts-fedora-40.repo 
-    - https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-40/wezfurlong-wezterm-nightly-fedora-40.repo
   install:
     - ykpers
     - yubikey-personalization-gui
@@ -27,7 +26,6 @@
     - atftp-client
     - syncthing
     - nerd-fonts
-    - wezterm
     - sway
     - rofi-wayland
     - virt-install
