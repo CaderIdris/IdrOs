@@ -24,41 +24,47 @@ IntensityAmount=0
 IntensityEffect=0
 
 [Colors:Button]
-BackgroundAlternate=60,56,54
+BackgroundAlternate=146,90,37
 BackgroundNormal=40,40,40
-DecorationFocus=104,157,106
-DecorationHover=131,165,152
-ForegroundActive=142,192,124
+DecorationFocus=192,112,36
+DecorationHover=192,112,36
+ForegroundActive=192,112,36
 ForegroundInactive=55,115,117
-ForegroundLink=184,187,38
+ForegroundLink=252,192,159
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
 ForegroundNormal=235,219,178
 ForegroundPositive=39,174,96
 ForegroundVisited=127,140,141
 
+[Colors:Complementary]
+DecorationFocus=192,112,36
+DecorationHover=192,112,36
+ForegroundActive=192,112,36
+ForegroundLink=192,112,36
+
 [Colors:Selection]
-BackgroundAlternate=142,192,124
-BackgroundNormal=104,157,106
-DecorationFocus=104,157,106
-DecorationHover=131,165,152
-ForegroundActive=252,252,252
-ForegroundInactive=235,219,178
-ForegroundLink=253,188,75
+BackgroundAlternate=146,90,37
+BackgroundNormal=146,90,37
+DecorationFocus=192,112,36
+DecorationHover=192,112,36
+ForegroundActive=192,112,36
+ForegroundInactive=255,255,255
+ForegroundLink=140,82,26
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
-ForegroundNormal=235,219,178
+ForegroundNormal=255,255,255
 ForegroundPositive=39,174,96
 ForegroundVisited=189,195,199
 
 [Colors:Tooltip]
 BackgroundAlternate=60,56,54
 BackgroundNormal=40,40,40
-DecorationFocus=104,157,106
-DecorationHover=131,165,152
-ForegroundActive=184,187,38
+DecorationFocus=192,112,36
+DecorationHover=192,112,36
+ForegroundActive=192,112,36
 ForegroundInactive=55,115,117
-ForegroundLink=142,192,124
+ForegroundLink=252,192,159
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
 ForegroundNormal=235,219,178
@@ -68,11 +74,11 @@ ForegroundVisited=127,140,141
 [Colors:View]
 BackgroundAlternate=60,56,54
 BackgroundNormal=40,40,40
-DecorationFocus=104,157,106
-DecorationHover=131,165,152
-ForegroundActive=184,187,38
+DecorationFocus=192,112,36
+DecorationHover=192,112,36
+ForegroundActive=192,112,36
 ForegroundInactive=55,115,117
-ForegroundLink=142,192,124
+ForegroundLink=252,192,159
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
 ForegroundNormal=235,219,178
@@ -82,19 +88,26 @@ ForegroundVisited=127,140,141
 [Colors:Window]
 BackgroundAlternate=60,56,54
 BackgroundNormal=40,40,40
-DecorationFocus=104,157,106
-DecorationHover=131,165,152
-ForegroundActive=184,187,38
+DecorationFocus=192,112,36
+DecorationHover=192,112,36
+ForegroundActive=192,112,36
 ForegroundInactive=55,115,117
-ForegroundLink=142,192,124
+ForegroundLink=252,192,159
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
 ForegroundNormal=235,219,178
 ForegroundPositive=39,174,96
 ForegroundVisited=127,140,141
 
+[DirSelect Dialog]
+DirSelectDialog Size=960,600
+History Items[$e]=file:$HOME/Containers/datblygiad/Empirisys/Consultancy/Harbour,file:$HOME/Containers/datblygiad/Empirisys/Consultancy/Harbour
+
 [General]
-ColorSchemeHash=68f7da041112b660ac4e6911cf4bf8a7b361feda
+AccentColor=192,112,36
+ColorScheme=GruvboxColors
+ColorSchemeHash=4a48bd34ba53d580d8594cb0216221e77518509f
+accentColorFromWallpaper=true
 
 [Icons]
 Theme=Gruvbox-Plus-Dark
@@ -118,7 +131,7 @@ Show hidden files=true
 Sort by=Name
 Sort directories first=true
 Sort hidden files last=false
-Sort reversed=false
+Sort reversed=true
 Speedbar Width=138
 View Style=DetailTree
 
