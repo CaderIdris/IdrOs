@@ -37,6 +37,7 @@
     - libguestfs-tools
     - python3-libguestfs
     - virt-top
+    - python3-pyclip
   remove:
     - opensc
     - firefox # default firefox removed in favor of flatpak
