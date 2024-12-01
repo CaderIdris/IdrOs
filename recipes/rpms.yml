@@ -11,8 +11,8 @@
     - gpg
     - gnupg2
     - gnupg-pkcs11-scd
-    - pcsc-tools
-    - pcsc-lite-ccid
+    # - pcsc-tools
+    # - pcsc-lite-ccid
     - docker-ce
     - docker-ce-cli
     - containerd.io
@@ -39,6 +39,6 @@
     - virt-top
     - python3-pyclip
   remove:
-    - opensc
+    # - opensc
     - firefox # default firefox removed in favor of flatpak
     - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
