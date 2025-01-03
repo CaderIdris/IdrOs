@@ -28,6 +28,7 @@
     - nerd-fonts
     - sway
     - bemenu
+    - j4-dmenu-desktop
     - virt-install
     - libvirt-daemon-config-network
     - libvirt-daemon-kvm
@@ -39,6 +40,6 @@
     - virt-top
     - python3-pyclip
   remove:
-    # - opensc
+    - opensc
     - firefox # default firefox removed in favor of flatpak
     - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
