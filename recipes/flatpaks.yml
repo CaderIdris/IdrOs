@@ -8,7 +8,7 @@ system:
     - org.wezfurlong.wezterm
     - io.mpv.Mpv
     - com.interversehq.qView
-    - org.mozilla.firefox
+    - io.github.zen_browser.zen
 user:
   repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
   repo-name: flathub

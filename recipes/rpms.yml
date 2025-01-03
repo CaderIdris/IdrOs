@@ -11,8 +11,8 @@
     - gpg
     - gnupg2
     - gnupg-pkcs11-scd
-    # - pcsc-tools
-    # - pcsc-lite-ccid
+    - pcsc-tools
+    - pcsc-lite-ccid
     - docker-ce
     - docker-ce-cli
     - containerd.io
@@ -27,7 +27,7 @@
     - syncthing
     - nerd-fonts
     - sway
-    - rofi-wayland
+    - bemenu
     - virt-install
     - libvirt-daemon-config-network
     - libvirt-daemon-kvm
